@@ -1,24 +1,160 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" systemVersion="17A277" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="4qc-rB-PRT">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--This is me-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Tab_Bar_Lab" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="hT9-OG-9n1">
+                                <rect key="frame" x="0.0" y="25" width="375" height="642"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Это я" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iBE-83-Ymf">
+                                        <rect key="frame" x="147.5" y="0.0" width="80" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="SIO-wv-19E"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="33"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="me" translatesAutoresizingMaskIntoConstraints="NO" id="ajy-ku-bwA">
+                                        <rect key="frame" x="0.0" y="35" width="375" height="607"/>
+                                    </imageView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="hT9-OG-9n1" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="78M-VK-c0V"/>
+                            <constraint firstItem="hT9-OG-9n1" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="25" id="9nC-7F-qJw"/>
+                            <constraint firstAttribute="trailing" secondItem="hT9-OG-9n1" secondAttribute="trailing" id="Jyx-gL-QEl"/>
+                            <constraint firstAttribute="bottom" secondItem="hT9-OG-9n1" secondAttribute="bottom" id="x83-gO-7HE"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <tabBarItem key="tabBarItem" title="This is me" id="SHG-Fy-0G2"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="921" y="-258"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="vy8-AH-gjM">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="4qc-rB-PRT" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="eAJ-zY-Nnh">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="ihN-o3-bu2"/>
+                        <segue destination="9CI-l9-y4P" kind="relationship" relationship="viewControllers" id="hYa-4a-QDi"/>
+                        <segue destination="AB1-pe-Jzh" kind="relationship" relationship="viewControllers" id="ppp-xE-Bg7"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Jw6-4b-Csg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="133.5832083958021"/>
+        </scene>
+        <!--This is bumblebee-->
+        <scene sceneID="Hc9-fo-nGk">
+            <objects>
+                <viewController id="9CI-l9-y4P" customClass="ViewController" customModule="Tab_Bar_Lab" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="SkT-BR-sCa">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="5aj-kK-0cx">
+                                <rect key="frame" x="0.0" y="25" width="375" height="642"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Это шмели" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Oaq-0k-dp6">
+                                        <rect key="frame" x="105" y="0.0" width="165" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="IN2-jw-oEH"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="33"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bumblebee" translatesAutoresizingMaskIntoConstraints="NO" id="qlY-Yf-YIN">
+                                        <rect key="frame" x="0.0" y="35" width="375" height="607"/>
+                                    </imageView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="5aj-kK-0cx" secondAttribute="bottom" id="AkU-nh-Kvv"/>
+                            <constraint firstItem="5aj-kK-0cx" firstAttribute="top" secondItem="SkT-BR-sCa" secondAttribute="top" constant="25" id="Gr8-mq-6xL"/>
+                            <constraint firstItem="5aj-kK-0cx" firstAttribute="leading" secondItem="LkI-tM-ifh" secondAttribute="leading" id="eCr-Xp-oaF"/>
+                            <constraint firstAttribute="trailing" secondItem="5aj-kK-0cx" secondAttribute="trailing" id="sdr-MD-WQA"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="LkI-tM-ifh"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="This is bumblebee" id="icU-Hx-mmy"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Cra-gi-dKr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="921" y="466"/>
+        </scene>
+        <!--This is my dog-->
+        <scene sceneID="j9F-m2-n5w">
+            <objects>
+                <viewController id="AB1-pe-Jzh" customClass="ViewController" customModule="Tab_Bar_Lab" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="6bu-Wd-XWf">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="CLP-f2-imT">
+                                <rect key="frame" x="0.0" y="25" width="375" height="642"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Это мой пёс Рикки" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ybn-vn-qef">
+                                        <rect key="frame" x="48" y="0.0" width="279.5" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="5vj-bp-Tg2"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="33"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dog" translatesAutoresizingMaskIntoConstraints="NO" id="05z-Cb-bD8">
+                                        <rect key="frame" x="0.0" y="35" width="375" height="607"/>
+                                    </imageView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="CLP-f2-imT" secondAttribute="bottom" id="8Lx-4d-Ued"/>
+                            <constraint firstAttribute="trailing" secondItem="CLP-f2-imT" secondAttribute="trailing" id="G6j-uo-BD1"/>
+                            <constraint firstItem="CLP-f2-imT" firstAttribute="leading" secondItem="fEP-SD-pte" secondAttribute="leading" id="OMf-uc-L1C"/>
+                            <constraint firstItem="CLP-f2-imT" firstAttribute="top" secondItem="6bu-Wd-XWf" secondAttribute="top" constant="25" id="hK7-cn-Cgi"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="fEP-SD-pte"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="This is my dog" id="K14-zb-45c"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0Qt-lV-fys" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137" y="832"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="bumblebee" width="1500" height="844"/>
+        <image name="dog" width="1500" height="1000"/>
+        <image name="me" width="960" height="1280"/>
+    </resources>
 </document>
